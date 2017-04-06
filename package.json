@@ -1,0 +1,21 @@
+{
+  "name": "8bit-barbarians-super-mario-bros",
+  "version": "0.0.1",
+  "description": "Chingu Game Dev Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "python -m SimpleHTTPServer 8888"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YichengLiWi/ClassicMarioGame-Clone.git"
+  },
+  "author": "8bit Barbarians",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YichengLiWi/ClassicMarioGame-Clone/issues"
+  },
+  "homepage": "https://github.com/YichengLiWi/ClassicMarioGame-Clone#readme"
+}
