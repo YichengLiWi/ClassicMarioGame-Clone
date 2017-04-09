@@ -18,6 +18,11 @@ MarioBros.PreloadState = {
 
     this.load.image('home', 'assets/images/super-mario-bros-e-european-cover.jpg');  // load an image for our home state 
 
+    // params are asset key, img url, width, height, margin, spacing - we need 1 for margin because the spritesheet has a 1px border
+    this.load.spritesheet('mario', 'assets/images/Mario_small_spritesheet.png', 16, 16, 14, 1, 0);
+
+    this.load.spritesheet('goomba', 'assets/images/Goomba_spritesheet.png', 16, 16, 3, 0, 0);  
+
 
 
          

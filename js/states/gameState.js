@@ -18,9 +18,15 @@ MarioBros.GameState = {
     // ad platforms obstacles etc
 
     // add our player
-    
+    this.player = this.add.sprite(100, 100, 'mario');
+    this.player.anchor.setTo(0.5);
+    this.player.scale.setTo(2);
+
     // add enemies
 
+    this.enemy = this.add.sprite(150, 100, 'goomba');
+    this.enemy.anchor.setTo(0.5);
+    this.enemy.scale.setTo(2);
 
     // set up camera to follow player 
 
