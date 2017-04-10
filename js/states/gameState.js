@@ -22,6 +22,8 @@ MarioBros.GameState = {
     this.player.anchor.setTo(0.5);
     this.player.scale.setTo(2);
 
+    mario.body.gravity.y = 200;
+
     // add enemies
 
     this.enemy = this.add.sprite(150, 100, 'goomba');
