@@ -27,7 +27,8 @@ MarioBros.BootState = {
     this.game.RUNNING_SPEED = 180;
     this.game.JUMPING_SPEED = 550;
 
-    this.game.world.setBounds(0,0,360,700);  
+    this.game.world.setBounds(0,0,360,492);
+    console.log(this.game)  
   },
 
   preload: function() { //built in function
