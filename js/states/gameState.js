@@ -39,6 +39,12 @@ MarioBros.GameState = {
     this.enemy.anchor.setTo(0.5);
     this.enemy.scale.setTo(2);
 
+    // Set enemy to be affected by gravity, bounds, and bounce
+    this.game.physics.enable(this.enemy);
+    this.enemy.body.collideWorldBounds = true;
+    console.log(this.enemy);
+    this.enemy.body.bounce.y = 0.8;
+
     // set up camera to follow player 
 
 
