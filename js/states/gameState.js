@@ -9,16 +9,29 @@ MarioBros.GameState = {
     console.log(this.game)    
     // load level data from json 
   
-      //  this.game.load.text('level', 'assets/data/level-1.json'); 
-      //  //parse the file
 
+      //  //parse the file
+    this.levelData = JSON.parse(this.game.cache.getText('level'));  
+    
+    console.log(this.levelData);
       //  this.levelData = JSON.parse(this.game.cache.getText('level'));  
     
 
-    // ad platforms obstacles etc
+    // add platforms obstacles etc
+    this.platforms = this.add.group();
+    this.platforms.enableBody = true;
+     this.levelData.platformData.forEach(function(element){
+      for(var i = 0; i < element.n; i++) {
+       this.platforms.create(element.x + (i * 32) , element.y, element.key).scale.setTo(2);
+      }
+     }, this);
+    // this.platforms.scale.setTo(2);
+    this.platforms.setAll('body.immovable', true);
+    this.platforms.setAll('body.allowGravity', false);         
+
 
     // add our player
-    this.player = this.add.sprite(100, 100, 'mario');
+    this.player = this.add.sprite(this.levelData.playerStart.x, this.levelData.playerStart.y, 'mario');
     this.player.anchor.setTo(0.5);
     this.player.scale.setTo(2);
 
@@ -62,10 +75,10 @@ MarioBros.GameState = {
   },
 
   render: function() { // allows us to see the debug info  
-    this.game.debug.body(this.player); // comment these out hide
-    this.game.debug.body(this.enemy);  // comment these out hide
+    // this.game.debug.body(this.player); // comment these out hide
+    // this.game.debug.body(this.enemy);  // comment these out hide
 
-    this.game.debug.bodyInfo(this.enemy, 0, 20); // comment these out yo hide    
+    // this.game.debug.bodyInfo(this.enemy, 0, 20); // comment these out yo hide    
   },
 
   createOnscreenControls: function() { // an example of a custom function

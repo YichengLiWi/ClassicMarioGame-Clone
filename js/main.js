@@ -2,7 +2,7 @@
 var MarioBros = MarioBros || {}; // Namespace pattern  
 
 //initiate the a game 360px by 592 with Phaser framework  
-MarioBros.game = new Phaser.Game(360, 592, Phaser.AUTO, 'ld29', null, false, false); /// the last false disables anti-alias which is best for retro pixelated graphics
+MarioBros.game = new Phaser.Game(592, 360, Phaser.AUTO, 'ld29', null, false, false); /// the last false disables anti-alias which is best for retro pixelated graphics
 
 // these states are for different stages of game 
 MarioBros.game.state.add('GameState', MarioBros.GameState);  // the actual game

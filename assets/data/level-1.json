@@ -1,0 +1,7 @@
+{
+  "playerStart": {"x": 40, "y": 295},
+  "platformData": [
+      {"key": "brownBricks", "x": 0, "y": 328, "n": 10}
+    ],
+  "goal": {"x": 20, "y": 124}
+}
