@@ -43,7 +43,8 @@ MarioBros.GameState = {
     this.game.physics.enable(this.enemy);
     this.enemy.body.collideWorldBounds = true;
     console.log(this.enemy);
-    this.enemy.body.bounce.y = 0.8;
+    this.enemy.body.velocity.setTo(500, 200);
+    this.enemy.body.bounce.setTo(1, 0);
 
     // set up camera to follow player 
 
