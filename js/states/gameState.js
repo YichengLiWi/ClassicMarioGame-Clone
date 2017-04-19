@@ -25,6 +25,7 @@ MarioBros.GameState = {
     // create animation from spritesheet - key [frames], framerate, loop
     this.player.animations.add('walk', [0, 1, 2, 3], 15, true);
     this.player.play('walk');
+    this.player.enableBody = true;
 
     this.game.physics.enable(this.player);
 
@@ -57,7 +58,14 @@ MarioBros.GameState = {
 
     //do all our updates and collision detection in here
   
-    console.log('updating...')
+
+  },
+
+  render: function() { // allows us to see the debug info  
+    this.game.debug.body(this.player); // comment these out hide
+    this.game.debug.body(this.enemy);  // comment these out hide
+
+    this.game.debug.bodyInfo(this.enemy, 0, 20); // comment these out yo hide    
   },
 
   createOnscreenControls: function() { // an example of a custom function
